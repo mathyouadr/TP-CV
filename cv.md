@@ -30,6 +30,7 @@ J'ai réalisé 6 stages pendant mon Bac Pro, ainsi qu'un stage en 3e. En voici u
 
 - Préparation de commandes
 - Préparation de postes informatiques
+- Configuration d'appareils réseau
 
 ### Technicien informatique (stage) — Télécom Saint-Étienne
 
