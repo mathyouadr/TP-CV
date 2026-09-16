@@ -41,6 +41,7 @@ Le seul moyen de contact est le lien vers mon profil GitHub.
 ### Résultats des outils
 
 Tests réalisés le 16/09/2026 sur la version en ligne (https://mathyouadr.github.io/TP-CV/).
+Test sur smartphone réel : **iPhone 16 Pro avec Safari**.
 
 | Outil | Résultat | Analyse |
 |---|---|---|
@@ -83,19 +84,18 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 |---|---:|---:|---:|---|
 | C1 Contenu | 3 | 10 | 30 | Clair et structuré, niveau réel indiqué. Missions détaillées pour chaque expérience. Il manque des réalisations chiffrées. |
 | C2 HTML sémantique | 4 | 10 | 40 | Un seul `<h1>`, `h2` puis `h3` sans saut, balises structurelles, ancres explicites, W3C sans erreur. |
-| C3 Responsive | 4 | 15 | 60 | Mobile-first avec Grid et Flexbox, 3 points de rupture, aucun défilement horizontal à 320 px. |
+| C3 Responsive | 4 | 15 | 60 | Mobile-first avec Grid et Flexbox, 3 points de rupture, aucun défilement horizontal à 320 px, testé sur iPhone 16 Pro. |
 | C4 UX & Accessibilité | 4 | 15 | 60 | Contrastes AA mesurés, focus visible, lien d'évitement, liens explicites, animations réduites si demandé. |
 | C5 SEO | 4 | 10 | 40 | `<title>` et description pertinents et ajustés après l'audit Outiref, balise canonical, structure claire, libellés de liens descriptifs. PageSpeed SEO : 100. |
 | C6 Performance | 4 | 10 | 40 | Environ 32 ko au total, aucune dépendance, police système, script en `defer`. PageSpeed mobile : 99 en performance. |
 | C7 Validation & corrections | 4 | 10 | 40 | W3C sans erreur, structure Hn validée par Outiref, PageSpeed mobile entre 99 et 100, journal de 14 corrections. |
-| C8 Publication | 3 | 5 | 15 | Site en ligne et stable, corrigé après publication. Test sur un vrai smartphone à faire. |
+| C8 Publication | 4 | 5 | 20 | Site en ligne et stable, testé sur smartphone (iPhone 16 Pro, Safari), corrigé après publication. |
 | C9 Auto-évaluation | 4 | 5 | 20 | Résultats des 3 outils, analyse des causes, corrections et impact mesuré pour chacune. |
 | C10 Confidentialité | 4 | 5 | 20 | Aucune donnée personnelle, contact uniquement via GitHub, adresse email masquée dans les commits. |
 | C11 Qualité du dépôt | 4 | 5 | 20 | Arborescence conforme, README détaillé, commits en français au format `type: description`. |
-| **Total** | | **100** | **385** | **Note estimée : 19,25 / 20** |
+| **Total** | | **100** | **390** | **Note estimée : 19,5 / 20** |
 
 **Points forts** : code valide, page légère, accessibilité travaillée, contenu honnête sur mon niveau.
 
 **Axes d'amélioration** :
-- Tester le site sur un vrai smartphone.
 - Ajouter des réalisations concrètes, par exemple des projets sur GitHub.
