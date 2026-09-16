@@ -28,6 +28,9 @@ J'ai réalisé 6 stages pendant mon Bac Pro, ainsi qu'un stage en 3e. En voici u
 
 *Depuis septembre 2026*
 
+- Préparation de commandes
+- Préparation de postes informatiques
+
 ### Technicien informatique (stage) — Télécom Saint-Étienne
 
 *Décembre 2025 · 1 mois*
