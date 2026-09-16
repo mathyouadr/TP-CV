@@ -47,8 +47,8 @@ Test sur smartphone réel : **iPhone 16 Pro avec Safari**.
 |---|---|---|
 | validator.w3.org (HTML) | **0 erreur, 0 avertissement** | Balisage valide, aucune correction nécessaire. |
 | jigsaw.w3.org (CSS) | **Valide, 0 erreur, 3 avertissements** | Les 3 avertissements indiquent seulement que le validateur ne peut pas vérifier les variables CSS (`var(--…)`). Ils sont informatifs et ne bloquent rien. |
-| outiref.fr | **Structure Hn correcte** : 1 seul H1, 6 H2 et 17 H3 bien imbriqués. Aucune image. URL sans accent ni tiret bas. 2 remarques : `<title>` trop long (629 px pour une limite de 600 px) et meta description un peu courte (193 caractères pour 200 à 300 conseillés). Pas de balise canonical. | Les 3 points ont été corrigés (corrections 11 à 13). L'absence de meta Keywords n'est pas corrigée : Google ignore cette balise. Le code HTTP 301 est normal : GitHub Pages redirige automatiquement `http://` vers `https://`. |
-| pagespeed.web.dev (mobile) | **Performance : 99 / Accessibilité : 100 / Bonnes pratiques : 100 / SEO : 100** (Navigation agentique : 2/2) | Page très légère (environ 32 ko, sans image, police ni bibliothèque externe), d'où un chargement quasi instantané sur mobile. Les scores de 100 confirment les contrastes, les libellés de liens, la balise `lang` et les métadonnées. |
+| outiref.fr | **1er audit (16/09, 16h40)** : structure Hn correcte (1 seul H1, 6 H2 et 17 H3 bien imbriqués), aucune image, URL sans accent ni tiret bas. 3 remarques : `<title>` trop long (629 px pour une limite de 600 px), meta description un peu courte (193 caractères pour 200 à 300 conseillés), pas de balise canonical.<br>**2e audit après corrections (16/09, 17h00)** : `<title>` de 535 px « affiché totalement », description de 243 caractères « bonne taille », canonical détectée. | Les 3 remarques sont corrigées et confirmées par le 2e audit (corrections 11 à 13). L'absence de meta Keywords n'est pas corrigée : Google ignore cette balise. Le code HTTP 301 est normal : GitHub Pages redirige automatiquement `http://` vers `https://`. |
+| pagespeed.web.dev (mobile) | **Performance : 99 / Accessibilité : 100 / Bonnes pratiques : 100 / SEO : 100** (Navigation agentique : 2/2)<br>First Contentful Paint : 0,8 s · Largest Contentful Paint : 0,8 s · Total Blocking Time : 0 ms · Cumulative Layout Shift : 0 · Speed Index : 3,6 s<br>*Mesure du 16/09 à 17h01, Lighthouse 13.4.1, Moto G Power émulé en 4G lente.* | Page très légère (environ 32 ko, sans image, police ni bibliothèque externe) : contenu affiché en 0,8 s, sans décalage de mise en page. Les pistes restantes sont mineures :<br>• **CSS bloquant le rendu (300 ms estimés)** : conservé, car l'arborescence demandée impose un fichier `css/style.css` séparé.<br>• **Durée de cache (6 Kio)** : fixée par GitHub Pages, non modifiable.<br>• **Animation non composée (1 élément)** : le point vert qui pulse anime une ombre (`box-shadow`). Elle maintient probablement l'affichage en mouvement, ce qui pourrait expliquer un Speed Index plus élevé que le First Contentful Paint.<br>• Les en-têtes de sécurité non notés (CSP, HSTS, COOP…) sont gérés par GitHub Pages. |
 
 ### Corrections de la V1 à la version finale
 
@@ -71,9 +71,9 @@ Test sur smartphone réel : **iPhone 16 Pro avec Safari**.
 
 | # | Problème constaté | Correction apportée | Critère | Impact mesuré |
 |---|---|---|---|---|
-| 11 | `<title>` de 74 caractères (629 px), coupé dans les résultats Google (limite de 600 px). | Titre raccourci : « Mathyou ANDRE – CV Technicien Numérique, alternant BTS SIO SISR ». | C5 | 74 → 63 caractères, environ 536 px : le titre s'affiche en entier. |
-| 12 | Meta description de 193 caractères, sous les 200 à 300 conseillés. | Description complétée avec le parcours et les 6 stages. | C5 | 193 → 243 caractères. |
-| 13 | Pas de balise canonical : le site répond à la fois en `http://` et en `https://`. | Ajout de `<link rel="canonical">` vers l'adresse `https://`. | C5 | Une seule adresse de référence pour les moteurs de recherche. |
+| 11 | `<title>` de 74 caractères (629 px), coupé dans les résultats Google (limite de 600 px). | Titre raccourci : « Mathyou ANDRE – CV Technicien Numérique, alternant BTS SIO SISR ». | C5 | 74 → 63 caractères, 629 → 535 px : titre « affiché totalement » selon le 2e audit Outiref. |
+| 12 | Meta description de 193 caractères, sous les 200 à 300 conseillés. | Description complétée avec le parcours et les 6 stages. | C5 | 193 → 243 caractères, jugée de « bonne taille » par le 2e audit Outiref. |
+| 13 | Pas de balise canonical : le site répond à la fois en `http://` et en `https://`. | Ajout de `<link rel="canonical">` vers l'adresse `https://`. | C5 | Canonical détectée par le 2e audit Outiref : une seule adresse de référence pour les moteurs de recherche. |
 | 14 | L'alternance chez SIGMA NET SANTE n'avait aucune mission détaillée. | Ajout des missions : préparation de commandes, préparation de postes informatiques et configuration d'appareils réseau. | C1 | Toutes les expériences affichées décrivent maintenant des missions. |
 | 15 | La compétence Réseaux indiquait « vus en stage » alors que je configure aussi des appareils réseau en alternance. | Description mise en cohérence avec mes missions en alternance. | C1 | Compétences et expériences cohérentes entre elles. |
 
@@ -99,4 +99,5 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 **Points forts** : code valide, page légère, accessibilité travaillée, contenu honnête sur mon niveau.
 
 **Axes d'amélioration** :
+- Remplacer l'animation du point vert par une animation composée (`transform` et `opacity`) pour lever le dernier diagnostic PageSpeed.
 - Ajouter des réalisations concrètes, par exemple des projets sur GitHub.
