@@ -66,13 +66,14 @@ Tests réalisés le 16/09/2026 sur la version en ligne (https://mathyouadr.githu
 | 9 | Compétences présentées comme maîtrisées et nombre de stages incomplet. | Mention « Niveau débutant » sur les 7 compétences ; 6 stages de Bac Pro et le stage de 3e indiqués. | C1 | Contenu fidèle à mon niveau réel. |
 | 10 | 8 avertissements au validateur CSS (préfixes `-webkit-`, police `-apple-system`, même couleur de fond et de bordure). | Suppression des préfixes inutiles et ajustement des couleurs. | C7 | 8 → 3 avertissements, les 3 restants étant informatifs. |
 
-**Corrections après publication**, suite à l'audit Outiref :
+**Corrections après publication** (audit Outiref et relecture du contenu) :
 
 | # | Problème constaté | Correction apportée | Critère | Impact mesuré |
 |---|---|---|---|---|
 | 11 | `<title>` de 74 caractères (629 px), coupé dans les résultats Google (limite de 600 px). | Titre raccourci : « Mathyou ANDRE – CV Technicien Numérique, alternant BTS SIO SISR ». | C5 | 74 → 63 caractères, environ 536 px : le titre s'affiche en entier. |
 | 12 | Meta description de 193 caractères, sous les 200 à 300 conseillés. | Description complétée avec le parcours et les 6 stages. | C5 | 193 → 243 caractères. |
 | 13 | Pas de balise canonical : le site répond à la fois en `http://` et en `https://`. | Ajout de `<link rel="canonical">` vers l'adresse `https://`. | C5 | Une seule adresse de référence pour les moteurs de recherche. |
+| 14 | L'alternance chez SIGMA NET SANTE n'avait aucune mission détaillée. | Ajout des missions : préparation de commandes et préparation de postes informatiques. | C1 | Toutes les expériences affichées décrivent maintenant des missions. |
 
 ### Bilan selon la grille d'évaluation
 
@@ -80,13 +81,13 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 
 | Critère | Score (0–4) | Coef | Pondéré | Justification |
 |---|---:|---:|---:|---|
-| C1 Contenu | 3 | 10 | 30 | Clair et structuré, niveau réel indiqué. Il manque des réalisations chiffrées et le détail de mes missions en alternance. |
+| C1 Contenu | 3 | 10 | 30 | Clair et structuré, niveau réel indiqué. Missions détaillées pour chaque expérience. Il manque des réalisations chiffrées. |
 | C2 HTML sémantique | 4 | 10 | 40 | Un seul `<h1>`, `h2` puis `h3` sans saut, balises structurelles, ancres explicites, W3C sans erreur. |
 | C3 Responsive | 4 | 15 | 60 | Mobile-first avec Grid et Flexbox, 3 points de rupture, aucun défilement horizontal à 320 px. |
 | C4 UX & Accessibilité | 4 | 15 | 60 | Contrastes AA mesurés, focus visible, lien d'évitement, liens explicites, animations réduites si demandé. |
 | C5 SEO | 4 | 10 | 40 | `<title>` et description pertinents et ajustés après l'audit Outiref, balise canonical, structure claire, libellés de liens descriptifs. PageSpeed SEO : 100. |
 | C6 Performance | 4 | 10 | 40 | Environ 32 ko au total, aucune dépendance, police système, script en `defer`. PageSpeed mobile : 99 en performance. |
-| C7 Validation & corrections | 4 | 10 | 40 | W3C sans erreur, structure Hn validée par Outiref, PageSpeed mobile entre 99 et 100, journal de 13 corrections. |
+| C7 Validation & corrections | 4 | 10 | 40 | W3C sans erreur, structure Hn validée par Outiref, PageSpeed mobile entre 99 et 100, journal de 14 corrections. |
 | C8 Publication | 3 | 5 | 15 | Site en ligne et stable, corrigé après publication. Test sur un vrai smartphone à faire. |
 | C9 Auto-évaluation | 4 | 5 | 20 | Résultats des 3 outils, analyse des causes, corrections et impact mesuré pour chacune. |
 | C10 Confidentialité | 4 | 5 | 20 | Aucune donnée personnelle, contact uniquement via GitHub, adresse email masquée dans les commits. |
@@ -97,5 +98,4 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 
 **Axes d'amélioration** :
 - Tester le site sur un vrai smartphone.
-- Détailler mes missions en alternance chez SIGMA NET SANTE.
 - Ajouter des réalisations concrètes, par exemple des projets sur GitHub.
