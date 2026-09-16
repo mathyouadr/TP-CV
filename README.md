@@ -75,6 +75,7 @@ Test sur smartphone réel : **iPhone 16 Pro avec Safari**.
 | 12 | Meta description de 193 caractères, sous les 200 à 300 conseillés. | Description complétée avec le parcours et les 6 stages. | C5 | 193 → 243 caractères. |
 | 13 | Pas de balise canonical : le site répond à la fois en `http://` et en `https://`. | Ajout de `<link rel="canonical">` vers l'adresse `https://`. | C5 | Une seule adresse de référence pour les moteurs de recherche. |
 | 14 | L'alternance chez SIGMA NET SANTE n'avait aucune mission détaillée. | Ajout des missions : préparation de commandes, préparation de postes informatiques et configuration d'appareils réseau. | C1 | Toutes les expériences affichées décrivent maintenant des missions. |
+| 15 | La compétence Réseaux indiquait « vus en stage » alors que je configure aussi des appareils réseau en alternance. | Description mise en cohérence avec mes missions en alternance. | C1 | Compétences et expériences cohérentes entre elles. |
 
 ### Bilan selon la grille d'évaluation
 
@@ -88,7 +89,7 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 | C4 UX & Accessibilité | 4 | 15 | 60 | Contrastes AA mesurés, focus visible, lien d'évitement, liens explicites, animations réduites si demandé. |
 | C5 SEO | 4 | 10 | 40 | `<title>` et description pertinents et ajustés après l'audit Outiref, balise canonical, structure claire, libellés de liens descriptifs. PageSpeed SEO : 100. |
 | C6 Performance | 4 | 10 | 40 | Environ 32 ko au total, aucune dépendance, police système, script en `defer`. PageSpeed mobile : 99 en performance. |
-| C7 Validation & corrections | 4 | 10 | 40 | W3C sans erreur, structure Hn validée par Outiref, PageSpeed mobile entre 99 et 100, journal de 14 corrections. |
+| C7 Validation & corrections | 4 | 10 | 40 | W3C sans erreur, structure Hn validée par Outiref, PageSpeed mobile entre 99 et 100, journal de 15 corrections. |
 | C8 Publication | 4 | 5 | 20 | Site en ligne et stable, testé sur smartphone (iPhone 16 Pro, Safari), corrigé après publication. |
 | C9 Auto-évaluation | 4 | 5 | 20 | Résultats des 3 outils, analyse des causes, corrections et impact mesuré pour chacune. |
 | C10 Confidentialité | 4 | 5 | 20 | Aucune donnée personnelle, contact uniquement via GitHub, adresse email masquée dans les commits. |
