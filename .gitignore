@@ -1,0 +1,5 @@
+# CV source contenant des données personnelles (C10)
+*.pdf
+
+# Consignes locales pour Claude Code
+CLAUDE.md
