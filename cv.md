@@ -15,7 +15,7 @@ Toutes ces compétences sont de **niveau débutant** : ce sont des notions acqui
 - **Maintenance** (débutant) : notions d'installation, de configuration et de dépannage simple, matériel et logiciel, pratiquées en stage
 - **Virtualisation** (débutant) : notions de création de machines virtuelles (Proxmox), découverte de la gestion des ressources et des snapshots
 - **Administration système** (débutant) : notions de Windows Server et de Linux, découverte d'Active Directory en stage (groupes et droits utilisateurs)
-- **Réseaux** (débutant) : notions d'installation et de configuration de réseaux locaux, brassage et mise en service de switchs vus en stage
+- **Réseaux** (débutant) : notions d'installation et de configuration de réseaux locaux, brassage et mise en service de switchs en stage, configuration d'appareils réseau en alternance
 - **Support** (débutant) : notions d'assistance aux utilisateurs (hotline en stage) et de gestion du matériel
 - **Microcontrôleurs** (débutant) : notions de manipulation et de programmation (ESP32, Raspberry Pi, Arduino)
 - **Cybersécurité / CTF** (débutant) : découverte des bases du pentest et des vulnérabilités systèmes en autoformation, plus de 30 machines validées sur Hack The Box
