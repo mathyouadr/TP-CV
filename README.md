@@ -74,7 +74,7 @@ Test sur smartphone réel : **iPhone 16 Pro avec Safari**.
 | 11 | `<title>` de 74 caractères (629 px), coupé dans les résultats Google (limite de 600 px). | Titre raccourci : « Mathyou ANDRE – CV Technicien Numérique, alternant BTS SIO SISR ». | C5 | 74 → 63 caractères, environ 536 px : le titre s'affiche en entier. |
 | 12 | Meta description de 193 caractères, sous les 200 à 300 conseillés. | Description complétée avec le parcours et les 6 stages. | C5 | 193 → 243 caractères. |
 | 13 | Pas de balise canonical : le site répond à la fois en `http://` et en `https://`. | Ajout de `<link rel="canonical">` vers l'adresse `https://`. | C5 | Une seule adresse de référence pour les moteurs de recherche. |
-| 14 | L'alternance chez SIGMA NET SANTE n'avait aucune mission détaillée. | Ajout des missions : préparation de commandes et préparation de postes informatiques. | C1 | Toutes les expériences affichées décrivent maintenant des missions. |
+| 14 | L'alternance chez SIGMA NET SANTE n'avait aucune mission détaillée. | Ajout des missions : préparation de commandes, préparation de postes informatiques et configuration d'appareils réseau. | C1 | Toutes les expériences affichées décrivent maintenant des missions. |
 
 ### Bilan selon la grille d'évaluation
 
