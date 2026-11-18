@@ -13,8 +13,8 @@ Le contenu a d'abord été rédigé en Markdown (`cv.md`), puis intégré en HTM
 ├─ css/
 │  └─ style.css    Styles (mobile-first, thème clair et sombre)
 ├─ js/
-│  └─ app.js       Bouton clair/sombre, menu actif, année du pied de page
-├─ img/            Images optimisées (vide pour l'instant)
+│  └─ app.js       Bouton clair/sombre, animations, menu actif, année du pied de page
+├─ img/            Favicon SVG et captures des projets en WebP (800 × 450, moins de 18 ko)
 ├─ cv.md           Contenu du CV rédigé en Markdown
 └─ README.md
 ```
@@ -25,11 +25,13 @@ Aucun serveur n'est nécessaire : il suffit d'ouvrir `index.html` dans un naviga
 
 ## Choix techniques
 
-- **HTML sémantique** : un seul `<h1>`, titres `h2` puis `h3` sans saut de niveau, balises `header`, `nav`, `main`, `section`, `article` et `footer`.
+Le design reprend celui de mon portfolio personnel (réalisé avec Astro et Tailwind CSS), réécrit ici en HTML et CSS purs pour respecter les consignes du TP : une seule page, aucun framework, aucune étape de compilation.
+
+- **HTML sémantique** : un seul `<h1>`, titres `h2`, `h3` puis `h4` sans saut de niveau, balises `header`, `nav`, `main`, `section`, `article` et `footer`.
 - **Responsive** : CSS mobile-first avec Flexbox et Grid, sans Bootstrap pour garder une page légère. Aucun défilement horizontal, vérifié à 320 px de large.
-- **Accessibilité** : contrastes conformes WCAG AA dans les deux thèmes, texte de 16 px minimum, focus visible au clavier, lien « Aller au contenu principal », textes de liens explicites, animations désactivées si l'utilisateur le demande.
-- **SEO** : `<title>` et `<meta name="description">` renseignés, ancres lisibles (`#profil`, `#experiences`…).
-- **Performance** : police système (aucune police web), aucune bibliothèque ni CDN, script chargé avec `defer`. Un court script dans le `<head>` applique le thème choisi avant l'affichage pour éviter un flash de couleur.
+- **Accessibilité** : contrastes conformes WCAG AA dans les deux thèmes, texte de 16 px minimum, focus visible au clavier, lien « Aller au contenu principal », textes de liens explicites, icônes et schéma décoratifs masqués aux lecteurs d'écran, animations courtes (jamais en boucle infinie) et désactivées si l'utilisateur le demande.
+- **SEO** : `<title>` et `<meta name="description">` renseignés, balise canonical, ancres lisibles (`#parcours`, `#competences`…).
+- **Performance** : police système (aucune police web), aucune bibliothèque ni CDN, script chargé avec `defer`, icônes en SVG intégré, images WebP chargées en différé (`loading="lazy"`) avec dimensions fixées. Animations limitées à `opacity` et `transform`. Un court script dans le `<head>` applique le thème choisi avant l'affichage pour éviter un flash de couleur.
 
 ## Données personnelles
 
@@ -38,7 +40,28 @@ Le seul moyen de contact est le lien vers mon profil GitHub.
 
 ## Auto-évaluation
 
-### Résultats des outils
+### Refonte V2 (18/11/2026) : design de mon portfolio
+
+La page a été refaite avec le design et le contenu de mon portfolio personnel, adaptés aux contraintes du TP.
+
+| # | Changement | Raison / contrainte du TP | Critère |
+|---|---|---|---|
+| 17 | Nouveau design « baie de brassage » : schéma de switch câblé, chiffres clés, frise de parcours, grille de compétences, bandeau Hack The Box. | Reprendre l'identité visuelle de mon portfolio. | C3, C4 |
+| 18 | Site Astro + Tailwind converti en une seule page `index.html` + `css/style.css` + `js/app.js`. | Arborescence imposée, publication depuis `main` / `root` sans compilation. | C8, C11 |
+| 19 | Polices web Bricolage Grotesque et JetBrains Mono remplacées par la police système. | Pas de polices web multiples. | C6 |
+| 20 | Email et LinkedIn retirés : seul le lien GitHub reste. | Aucune donnée personnelle sensible. | C10 |
+| 21 | Section Projets ajoutée (Lecteur PDF, vidéoprojecteur connecté, MacroPad) avec captures converties en WebP 800 × 450 (16 à 18 ko chacune, métadonnées supprimées). | Réalisations concrètes (axe d'amélioration de la V1), images optimisées. | C1, C6 |
+| 22 | Animations du portfolio adaptées : tracé des câbles remplacé par un fondu (`opacity`), aucune animation en boucle infinie. | Animations composées uniquement, déjà signalées par PageSpeed en V1 (correction 16). | C6, C4 |
+| 23 | Menu sur deux lignes sur téléphone, police réduite sous 368 px. | Les 4 liens tiennent sur une ligne à 320 px, sans défilement horizontal. | C3 |
+| 24 | Propriétés CSS récentes inconnues du validateur (`@container`, `steps(… jump-none)`, `::view-transition-*`) remplacées par des équivalents standards. | 6 erreurs signalées par le validateur CSS ramenées à 0. | C7 |
+
+Vérifications faites en local le 18/11/2026 :
+- **validator.w3.org (HTML)** : 0 erreur, 0 avertissement (8 remarques d'information sur des commentaires `<!-- ---- -->`, corrigées).
+- **jigsaw.w3.org (CSS)** : 0 erreur, 14 avertissements informatifs (12 variables CSS non vérifiables, 2 préfixes `-webkit-` gardés pour Safari).
+- **Responsive** : aucun défilement horizontal à 320 px, thème clair et sombre contrôlés, aucune erreur dans la console.
+- **Outiref et PageSpeed** : à repasser sur la version en ligne après publication.
+
+### Résultats des outils (V1)
 
 Tests réalisés le 16/09/2026 sur la version en ligne (https://mathyouadr.github.io/TP-CV/).
 Test sur smartphone réel : **iPhone 16 Pro avec Safari**.
@@ -100,4 +123,5 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 **Points forts** : code valide, page légère, accessibilité travaillée, contenu honnête sur mon niveau.
 
 **Axes d'amélioration** :
-- Ajouter des réalisations concrètes, par exemple des projets sur GitHub.
+- ~~Ajouter des réalisations concrètes, par exemple des projets sur GitHub.~~ Fait en V2 (section Projets).
+- Repasser Outiref et PageSpeed sur la V2 en ligne et compléter le tableau des résultats.

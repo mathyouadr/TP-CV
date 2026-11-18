@@ -6,3 +6,6 @@ CLAUDE.md
 
 # Grille d'évaluation fournie (document de travail)
 prompt.md
+
+# Configuration locale de l'aperçu
+.claude/
