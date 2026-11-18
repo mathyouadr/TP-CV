@@ -3,7 +3,7 @@
 CV web statique réalisé dans le cadre de ma formation en BTS SIO option SISR.
 Le contenu a d'abord été rédigé en Markdown (`cv.md`), puis intégré en HTML/CSS.
 
-**Site en ligne :** https://mathyouadr.github.io/TP-CV/
+**Site en ligne :** https://mathyouandre.fr/TP-CV/ (l'adresse https://mathyouadr.github.io/TP-CV/ y redirige)
 
 ## Structure du dépôt
 
@@ -54,12 +54,13 @@ La page a été refaite avec le design et le contenu de mon portfolio personnel,
 | 22 | Animations du portfolio adaptées : tracé des câbles remplacé par un fondu (`opacity`), aucune animation en boucle infinie. | Animations composées uniquement, déjà signalées par PageSpeed en V1 (correction 16). | C6, C4 |
 | 23 | Menu sur deux lignes sur téléphone, police réduite sous 368 px. | Les 4 liens tiennent sur une ligne à 320 px, sans défilement horizontal. | C3 |
 | 24 | Propriétés CSS récentes inconnues du validateur (`@container`, `steps(… jump-none)`, `::view-transition-*`) remplacées par des équivalents standards. | 6 erreurs signalées par le validateur CSS ramenées à 0. | C7 |
+| 25 | La balise canonical pointait vers `mathyouadr.github.io/TP-CV/`, qui redirige (301) vers `mathyouandre.fr/TP-CV/` (domaine personnalisé de mon compte GitHub). | Canonical et URL du README mises sur l'adresse finale `https://mathyouandre.fr/TP-CV/`. | C5 |
 
 Vérifications faites en local le 18/11/2026 :
 - **validator.w3.org (HTML)** : 0 erreur, 0 avertissement (8 remarques d'information sur des commentaires `<!-- ---- -->`, corrigées).
 - **jigsaw.w3.org (CSS)** : 0 erreur, 14 avertissements informatifs (12 variables CSS non vérifiables, 2 préfixes `-webkit-` gardés pour Safari).
 - **Responsive** : aucun défilement horizontal à 320 px, thème clair et sombre contrôlés, aucune erreur dans la console.
-- **Outiref et PageSpeed** : à repasser sur la version en ligne après publication.
+- **Outiref et PageSpeed** : à repasser sur https://mathyouandre.fr/TP-CV/.
 
 ### Résultats des outils (V1)
 
