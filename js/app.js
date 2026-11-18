@@ -57,27 +57,6 @@ if (bouton) {
   });
 }
 
-// ---------- Déchiffrage du nom ----------
-// Chaque lettre passe par des caractères au hasard avant de se fixer.
-// Le vrai nom est déjà dans le HTML (et dans l'aria-label du titre).
-if (!mouvementReduit) {
-  const glyphes = "abcdefghijklmnopqrstuvwxyz0123456789#$%&@*+=<>?/";
-  document.querySelectorAll("[data-dechiffre]").forEach((el, rang) => {
-    const final = el.textContent;
-    el.style.width = `${el.offsetWidth}px`; // évite que le titre ne saute
-    const debut = performance.now() + rang * 250;
-    const image = () => {
-      const fixes = Math.floor((performance.now() - debut) / 70 - 3);
-      el.textContent = [...final]
-        .map((c, i) => (i < fixes ? c : glyphes[Math.floor(Math.random() * glyphes.length)]))
-        .join("");
-      if (fixes < final.length) setTimeout(image, 60);
-      else el.style.width = "";
-    };
-    image();
-  });
-}
-
 // ---------- Révélation et compteurs à l'entrée dans l'écran ----------
 const cibles = document.querySelectorAll(".apparait");
 const compteurs = document.querySelectorAll("[data-compteur]");

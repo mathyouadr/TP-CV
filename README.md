@@ -56,6 +56,7 @@ La page a été refaite avec le design et le contenu de mon portfolio personnel,
 | 24 | Propriétés CSS récentes inconnues du validateur (`@container`, `steps(… jump-none)`, `::view-transition-*`) remplacées par des équivalents standards. | 6 erreurs signalées par le validateur CSS ramenées à 0. | C7 |
 | 25 | La balise canonical pointait vers `mathyouadr.github.io/TP-CV/`, qui redirige (301) vers `mathyouandre.fr/TP-CV/` (domaine personnalisé de mon compte GitHub). | Canonical et URL du README mises sur l'adresse finale `https://mathyouandre.fr/TP-CV/`. | C5 |
 | 26 | Projets décrits sans résultat mesurable (critère C1 : « orienté résultats »). | Ajout d'un résultat chiffré par projet, repris des mesures de mes fiches projets : voix IA plus de 60 fois plus rapide sur carte graphique que sur processeur, page du vidéoprojecteur affichée en 45 s au lieu de 100 s, PCB du MacroPad mené jusqu'à la carte finale. | C1 |
+| 27 | Speed Index (2,5 s sur PageSpeed mobile) bien au-dessus du First Contentful Paint (0,9 s) : le haut de page continuait de bouger après le premier affichage (texte qui monte, câbles et nœuds qui apparaissent, paquets en mouvement, LED, nom déchiffré, compteurs). | Haut de page affiché directement dans son état final : animations d'entrée, paquets SMIL, déchiffrage du nom et compteurs des chiffres clés supprimés. Le design reste identique, seules les animations sous la ligne de flottaison sont gardées. Mesure en local (Lighthouse mobile, 5 essais) : Speed Index égal au First Contentful Paint à chaque essai, contre jusqu'à +190 ms avant ; la remarque « animations non composées » disparaît. | C6 |
 
 Vérifications faites en local le 18/11/2026 :
 - **validator.w3.org (HTML)** : 0 erreur, 0 avertissement (8 remarques d'information sur des commentaires `<!-- ---- -->`, corrigées).
@@ -132,4 +133,4 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 
 **Axes d'amélioration** :
 - ~~Ajouter des réalisations concrètes, par exemple des projets sur GitHub.~~ Fait en V2 (section Projets).
-- Rendre composées les animations des « paquets » du schéma (seule remarque PageSpeed liée à mon code).
+- ~~Rendre composées les animations des « paquets » du schéma.~~ Fait (correction 27 : animations du haut de page supprimées).

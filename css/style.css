@@ -614,27 +614,7 @@ time,
   height: 0.55rem;
   border-radius: 999px;
   background-color: var(--c-ok);
-}
-
-/* Onde qui s'élargit deux fois puis s'arrête (transform + opacity : animation composée). */
-.statut-point::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background-color: var(--c-ok);
-  opacity: 0;
-  animation: onde 2s ease-out 2;
-}
-
-@keyframes onde {
-  from {
-    opacity: 1;
-  }
-  to {
-    transform: scale(3);
-    opacity: 0;
-  }
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-ok) 22%, transparent);
 }
 
 .nom {
@@ -645,7 +625,7 @@ time,
   letter-spacing: -0.04em;
 }
 
-.dechiffre {
+.nom-ligne {
   display: block;
   white-space: nowrap;
 }
@@ -667,34 +647,6 @@ time,
   margin-top: 1.5rem;
   color: var(--c-text-soft);
   font-size: 1.125rem;
-}
-
-/* Entrée du texte, sauf le titre : il reste affiché d'emblée pour le LCP. */
-.hero-texte > :not(.nom) {
-  animation: monte 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-.hero-texte > :nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.hero-texte > :nth-child(4) {
-  animation-delay: 0.28s;
-}
-
-.hero-texte > :nth-child(5) {
-  animation-delay: 0.36s;
-}
-
-.hero-texte > :nth-child(6) {
-  animation-delay: 0.46s;
-}
-
-@keyframes monte {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
 }
 
 /* ---------- Schéma de câblage ---------- */
@@ -726,10 +678,6 @@ time,
   --couleur: var(--c-paire-marron);
 }
 
-.switch {
-  animation: monte 0.7s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
 .switch-corps {
   fill: var(--c-surface);
   stroke: var(--c-border-strong);
@@ -750,29 +698,16 @@ time,
 
 .led {
   fill: var(--c-ok);
-  animation: clignote 1.4s step-end 3;
-}
-
-.led-2 {
-  animation-duration: 0.9s;
 }
 
 .led-3 {
   fill: var(--c-paire-orange);
-  animation-duration: 2.1s;
-  animation-iteration-count: 2;
 }
 
 @keyframes clignote {
   50% {
     opacity: 0.25;
   }
-}
-
-/* Les câbles apparaissent l'un après l'autre (opacité seule : animation composée). */
-.cable {
-  opacity: 0;
-  animation: apparition 0.6s calc(0.5s + var(--i) * 0.15s) ease-out forwards;
 }
 
 .cable-gaine {
@@ -788,32 +723,6 @@ time,
   stroke-opacity: 0.55;
   stroke-width: 2.5;
   stroke-dasharray: 6 9;
-}
-
-/* Paquet qui circule sur chaque câble (SMIL dans le HTML). */
-.paquet {
-  fill: var(--c-surface);
-  stroke: var(--couleur);
-  stroke-width: 3;
-  opacity: 0;
-  animation: apparition 0.3s calc(1.6s + var(--i) * 0.3s) forwards;
-}
-
-@keyframes apparition {
-  to {
-    opacity: 1;
-  }
-}
-
-.noeud {
-  animation: glisse 0.6s calc(1s + var(--i) * 0.15s) cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-@keyframes glisse {
-  from {
-    opacity: 0;
-    transform: translateX(16px);
-  }
 }
 
 .noeud-corps {
@@ -1306,10 +1215,6 @@ time,
     animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-
-  .paquet {
-    display: none;
   }
 
   .js .apparait {
