@@ -55,6 +55,7 @@ La page a été refaite avec le design et le contenu de mon portfolio personnel,
 | 23 | Menu sur deux lignes sur téléphone, police réduite sous 368 px. | Les 4 liens tiennent sur une ligne à 320 px, sans défilement horizontal. | C3 |
 | 24 | Propriétés CSS récentes inconnues du validateur (`@container`, `steps(… jump-none)`, `::view-transition-*`) remplacées par des équivalents standards. | 6 erreurs signalées par le validateur CSS ramenées à 0. | C7 |
 | 25 | La balise canonical pointait vers `mathyouadr.github.io/TP-CV/`, qui redirige (301) vers `mathyouandre.fr/TP-CV/` (domaine personnalisé de mon compte GitHub). | Canonical et URL du README mises sur l'adresse finale `https://mathyouandre.fr/TP-CV/`. | C5 |
+| 26 | Projets décrits sans résultat mesurable (critère C1 : « orienté résultats »). | Ajout d'un résultat chiffré par projet, repris des mesures de mes fiches projets : voix IA plus de 60 fois plus rapide sur carte graphique que sur processeur, page du vidéoprojecteur affichée en 45 s au lieu de 100 s, PCB du MacroPad mené jusqu'à la carte finale. | C1 |
 
 Vérifications faites en local le 18/11/2026 :
 - **validator.w3.org (HTML)** : 0 erreur, 0 avertissement (8 remarques d'information sur des commentaires `<!-- ---- -->`, corrigées).
@@ -114,7 +115,7 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 
 | Critère | Score (0–4) | Coef | Pondéré | Justification |
 |---|---:|---:|---:|---|
-| C1 Contenu | 3 | 10 | 30 | Clair et structuré, niveau réel indiqué. Missions détaillées pour chaque expérience. Il manque des réalisations chiffrées. |
+| C1 Contenu | 4 | 10 | 40 | Clair et structuré, niveau réel indiqué, missions détaillées. Chiffres clés (8 expériences, 34 machines Hack The Box) et un résultat mesuré pour chaque projet (correction 26). |
 | C2 HTML sémantique | 4 | 10 | 40 | Un seul `<h1>`, `h2` puis `h3` sans saut, balises structurelles, ancres explicites, W3C sans erreur. |
 | C3 Responsive | 4 | 15 | 60 | Mobile-first avec Grid et Flexbox, 3 points de rupture, aucun défilement horizontal à 320 px, testé sur iPhone 16 Pro. |
 | C4 UX & Accessibilité | 4 | 15 | 60 | Contrastes AA mesurés, focus visible, lien d'évitement, liens explicites, animations réduites si demandé. |
@@ -125,7 +126,7 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 | C9 Auto-évaluation | 4 | 5 | 20 | Résultats des 3 outils, analyse des causes, corrections et impact mesuré pour chacune. |
 | C10 Confidentialité | 4 | 5 | 20 | Aucune donnée personnelle, contact uniquement via GitHub, adresse email masquée dans les commits. |
 | C11 Qualité du dépôt | 4 | 5 | 20 | Arborescence conforme, README détaillé, commits en français au format `type: description`. |
-| **Total** | | **100** | **390** | **Note estimée : 19,5 / 20** |
+| **Total** | | **100** | **400** | **Note estimée : 20 / 20** |
 
 **Points forts** : code valide, page légère, accessibilité travaillée, contenu honnête sur mon niveau.
 

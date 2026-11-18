@@ -61,9 +61,9 @@ Acquises en cours, en stage, en alternance et en autoformation.
 
 ## Projets
 
-- **Lecteur PDF à voix haute** : application web auto-hébergée qui transforme des livres PDF en livres audio, lus par une voix IA sur une carte graphique allumée seulement au besoin (Python, SQLite, Docker, Proxmox, Wake-on-LAN).
-- **Vidéoprojecteur connecté** : vidéoprojecteur Android TV piloté par Home Assistant, allumage infrarouge, contrôle par ADB et page d'accueil auto-hébergée (Home Assistant, ADB, Python).
-- **MacroPad** : pavé de 9 touches programmables sur Raspberry Pi Pico, reconnu comme clavier USB sans driver, avec un logiciel PC pour reconfigurer les touches (CircuitPython, Python/Tkinter, Fusion 360).
+- **Lecteur PDF à voix haute** : application web auto-hébergée qui transforme des livres PDF en livres audio, lus par une voix IA sur une carte graphique allumée seulement au besoin (Python, SQLite, Docker, Proxmox, Wake-on-LAN). Résultat : une phrase de 13 s générée en 5 s sur la carte graphique contre plus de 5 min sur le processeur, soit plus de 60 fois plus vite ; un extrait de 506 phrases converti en 20 min (17 Mo).
+- **Vidéoprojecteur connecté** : vidéoprojecteur Android TV piloté par Home Assistant, allumage infrarouge, contrôle par ADB et page d'accueil auto-hébergée (Home Assistant, ADB, Python). Résultat : page d'accueil affichée environ 45 s après l'allumage contre environ 100 s avec ma première méthode, au plus près de la limite de 38 s imposée par le Wi-Fi du projecteur.
+- **MacroPad** : pavé de 9 touches programmables sur Raspberry Pi Pico, reconnu comme clavier USB sans driver, avec un logiciel PC pour reconfigurer les touches (CircuitPython, Python/Tkinter, Fusion 360). Résultat : 9 touches reconfigurables sans driver et un PCB mené jusqu'à la carte finale (schéma, routage, fabrication, soudure).
 
 ## Qualités et langues
 

@@ -1337,3 +1337,11 @@ time,
     transform: none;
   }
 }
+
+/* Résultat chiffré d'un projet : mis en avant par un filet d'accent. */
+.resultat {
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--c-accent);
+  color: var(--c-text-soft);
+}
