@@ -60,7 +60,13 @@ Vérifications faites en local le 18/11/2026 :
 - **validator.w3.org (HTML)** : 0 erreur, 0 avertissement (8 remarques d'information sur des commentaires `<!-- ---- -->`, corrigées).
 - **jigsaw.w3.org (CSS)** : 0 erreur, 14 avertissements informatifs (12 variables CSS non vérifiables, 2 préfixes `-webkit-` gardés pour Safari).
 - **Responsive** : aucun défilement horizontal à 320 px, thème clair et sombre contrôlés, aucune erreur dans la console.
-- **Outiref et PageSpeed** : à repasser sur https://mathyouandre.fr/TP-CV/.
+
+Résultats sur la version en ligne (https://mathyouandre.fr/TP-CV/) le 18/11/2026 :
+
+| Outil | Résultat | Analyse |
+|---|---|---|
+| outiref.fr (14h46) | `<title>` de 63 caractères (535 px) « affiché totalement », meta description de 214 caractères « bonne taille », canonical `https://mathyouandre.fr/TP-CV/` détectée, 1 seul H1 puis H2, H3 et H4 imbriqués, 3 images sur 3 avec un `alt` rempli, code HTTP 200, URL sans accent ni tiret bas. | Aucune remarque bloquante. L'absence de meta Keywords n'est pas corrigée : Google ignore cette balise. |
+| pagespeed.web.dev, mobile (14h45) | **Performance : 100 / Accessibilité : 100 / Bonnes pratiques : 100 / SEO : 100** (Navigation agentique : 2/2)<br>First Contentful Paint : 0,9 s · Largest Contentful Paint : 0,9 s · Total Blocking Time : 0 ms · Cumulative Layout Shift : 0 · Speed Index : 2,5 s<br>*Lighthouse 13.6.0, Moto G Power émulé en 4G lente.* | Score de performance passé de 99 (V1) à 100 malgré les images et les animations. Pistes signalées, sans effet sur le score :<br>• **Animations non composées (4 éléments)** : les 4 « paquets » du schéma combinent un fondu CSS et un déplacement SMIL.<br>• **CSS bloquant le rendu (300 ms estimés)** : conservé, l'arborescence impose `css/style.css`.<br>• **Durée de cache (7 Kio)** : fixée par GitHub Pages.<br>• **Ajustement forcé de la mise en page** : mesure de la largeur du nom avant l'animation de déchiffrage. |
 
 ### Résultats des outils (V1)
 
@@ -125,4 +131,4 @@ Coefficients par défaut de la grille, à remplacer par ceux du fichier officiel
 
 **Axes d'amélioration** :
 - ~~Ajouter des réalisations concrètes, par exemple des projets sur GitHub.~~ Fait en V2 (section Projets).
-- Repasser Outiref et PageSpeed sur la V2 en ligne et compléter le tableau des résultats.
+- Rendre composées les animations des « paquets » du schéma (seule remarque PageSpeed liée à mon code).
